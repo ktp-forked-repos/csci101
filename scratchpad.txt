@@ -1,0 +1,19 @@
+A.
+Traceback (most recent call last):
+  File "./CourseGradeFileLog.py", line 21, in <module>
+    fileLog = file(fileName, "a")
+IOError: [Errno 2] No such file or directory: 'helluva/engineer.txt'
+
+D.
+The file, back1.txt, landed in the parent directory of the folder
+where I saved CourseGradeFileLog.py. This is what I expected, as ".." is
+used to signify the parent directory. 
+
+E.
+In order to correctly update 'helluva/engineer.txt', the currect
+directory, parent of the currect directory, and the 'helluva' directory
+had to be accessed and examined, in the following order: the current
+directory (to find the .. entry), the parent directory (to find the
+_PARENT_ entry), the current directory again (to find the 'helluva'
+entry), and the 'helluva' directory itself (to find the 'engineer.txt'
+file).
